@@ -1,2 +1,7 @@
-# tunematch
-Song and Artist make it blast. 
+# tuneMatch
+Song and Artist make it blast.
+
+![alt text](img/logo.jpg "Title")
+
+
+
