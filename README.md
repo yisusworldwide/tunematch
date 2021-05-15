@@ -1,5 +1,5 @@
 # tuneMatch
-Song and Artist make it blast. 
+Song and Artist make it blast.
 
 ## Logo
 
