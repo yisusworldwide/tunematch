@@ -12,7 +12,7 @@
     <div data-text="Let's get down to business"><span>Let's get down to business</span></div>
     <p id="song">Here is your song</p>
     <p id="artist">Dare to pick an artist</p>
-    <form id="form">
+    <form action="/tune.js" method="get" id="form">
         <label id="label" for="artist1">Artist 1</label>
         <input name="artistChoice" id="artist1" type="radio">
 
@@ -22,6 +22,7 @@
         <label id="label" for="artist3">Artist 3</label>
         <input name="artistChoice" id="artist3" type="radio">
     </form>
+    <button id="button" type="submit" form="form" value="Submit">Play!</button>
 </body>
 
 </html>
