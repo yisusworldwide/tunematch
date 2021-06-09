@@ -12,6 +12,10 @@ body {
     overflow: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: crimson;
     /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */

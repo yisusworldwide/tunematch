@@ -2,27 +2,49 @@
 
 <head>
     <title>Tune Match</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="songs.js"></script>
 </head>
 
 <body>
-    <link rel="stylesheet" href="style.css">
-    <script src="tune.js"></script>
-    <h1><span>Tune</span>M<span>atch</span></h1>
+    <script>
+        var match = getMatch()
+    </script>
+    <a href="./index.html"><h1><span>Tune</span>M<span>atch</span></h1></a>
     <h2>Welcome to the Music Matching Quiz!!!</h2>
     <div data-text="Let's get down to business"><span>Let's get down to business</span></div>
-    <p id="song">Here is your song</p>
-    <p id="artist">Dare to pick an artist</p>
-    <form action="/tune.js" method="get" id="form">
-        <label id="label" for="artist1">Artist 1</label>
-        <input name="artistChoice" id="artist1" type="radio">
+    <p id="song">Here is your song: <span name="song">#HERE IS THE SONG</span></p>
+    <p id="artist">Dare to pick an artist:</p>
+    <form onsubmit="return resolve(this, match)" id="form">
+        <label id="label" name="option1" for="artist1">Artist 1</label>
+        <input name="artistChoice" id="artist1" type="radio" value=1>
 
-        <label id="label" for="artist2">Artist 2</label>
-        <input name="artistChoice" id="artist2" type="radio">
+        <label id="label" name="option2" for="artist2">Artist 2</label>
+        <input name="artistChoice" id="artist2" type="radio" value=2>
 
-        <label id="label" for="artist3">Artist 3</label>
-        <input name="artistChoice" id="artist3" type="radio">
+        <label id="label" name="option3" for="artist3">Artist 3</label>
+        <input name="artistChoice" id="artist3" type="radio" value=3>
     </form>
     <button id="button" type="submit" form="form" value="Submit">Play!</button>
+    <script>
+        document.getElementsByName("song")[0].innerHTML = match['song'];
+        document.getElementsByName("option1")[0].innerHTML = match['options'][1];
+        document.getElementsByName("option2")[0].innerHTML = match['options'][2];
+        document.getElementsByName("option3")[0].innerHTML = match['options'][3];
+
+        function resolve(form, match) {
+            var radios = document.getElementsByName('artistChoice')[match.correct-1];
+
+            if (radios.type === 'radio' && radios.checked) {
+                window.location.href = "./rightAnswer.html?answer=" + match.num;
+            } else {
+                window.location.href = "./wrongAnswer.html?answer=" + match.num;
+            }
+
+            return false;
+        }
+
+    </script>
 </body>
 
 </html>
