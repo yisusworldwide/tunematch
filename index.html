@@ -14,22 +14,28 @@
     <a href="./index.html" class="text-decoration-none">
         <h1><span>Tune</span>M<span>atch</span></h1>
     </a>
-    <h2 class="container">Welcome to the Music Matching Quiz!!!</h2>
+    <h2 class="container w-100">Welcome to the Music Matching Quiz!!!</h2>
     <div data-text="Let's get down to business"><span>Let's get down to business</span></div>
-    <!-- <div class="container"> -->
-    <p id="song">Here is your song: <span name="song">#HERE IS THE SONG</span></p>
-    <p id="artist">Dare to pick an artist:</p>
-    <form onsubmit="return resolve(this, match)" id="form">
-        <label id="label" name="option1" for="artist1">Artist 1</label>
-        <input name="artistChoice" id="artist1" type="radio" value=1>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p id="song">Here is your song: <span name="song">#HERE IS YOUR SONG</span></p>
+            </div>
+            <div class="col-6">
+                <p id="artist">Dare to pick an artist:</p>
+                <form onsubmit="return resolve(this, match)" id="form">
+                    <label id="label" name="option1" for="artist1">Artist 1</label>
+                    <input name="artistChoice" id="artist1" type="radio" value=1>
 
-        <label id="label" name="option2" for="artist2">Artist 2</label>
-        <input name="artistChoice" id="artist2" type="radio" value=2>
+                    <label id="label" name="option2" for="artist2">Artist 2</label>
+                    <input name="artistChoice" id="artist2" type="radio" value=2>
 
-        <label id="label" name="option3" for="artist3">Artist 3</label>
-        <input name="artistChoice" id="artist3" type="radio" value=3>
-        <!-- </div> -->
-    </form>
+                    <label id="label" name="option3" for="artist3">Artist 3</label>
+                    <input name="artistChoice" id="artist3" type="radio" value=3>
+                </form>
+            </div>
+        </div>
+    </div>
     <button id="button" type="submit" form="form" value="Submit">Play!</button>
     <script>
         document.getElementsByName("song")[0].innerHTML = match['song'];

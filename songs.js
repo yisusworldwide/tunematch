@@ -4,7 +4,7 @@ const matches = [
     { song: 'We Are The Champions', options: { 1: 'The Beatles', 2: 'Queen', 3: 'Rolling Stones' }, correct: 2 },
     { song: 'Hablame De Ti', options: { 1: 'Pimpinela', 2: 'Serrat', 3: 'Pecos' }, correct: 3 },
     { song: 'Llorando Por Granada', options: { 1: 'Los Puntos', 2: 'Zapato Veloz', 3: 'Mecano' }, correct: 1 },
-    { song: 'Tu Me Camelas', options: { 1: 'Julio Iglesias', 2: 'Niña Pastori', 3: 'Bose' }, correct: 2 },
+    { song: 'Tu Me Camelas', options: { 1: 'Julio Iglesias', 2: 'Nina Pastori', 3: 'Bose' }, correct: 2 },
     { song: 'Tanto La Queria', options: { 1: 'Rocio Durcal', 2: 'Bebe', 3: 'Andy & Lucas' }, correct: 3 },
     { song: 'Bamboleo', options: { 1: 'Gipsy Kings', 2: 'Janette', 3: 'Raphael' }, correct: 1 },
     { song: 'Toma Vitamina', options: { 1: 'Alex & Cristina', 2: 'La Fiesta', 3: 'Parchis' }, correct: 2 },
